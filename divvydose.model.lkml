@@ -28,6 +28,12 @@ explore: patient_seed_list {
 explore: gs_lead_intake {
   label: "Acquisition Funnel"
 
+  join: gs_never_started {
+    type: left_outer
+    sql_on: ${gs_lead_intake.patid} = ${gs_never_started.patid} ;;
+    relationship: many_to_one
+  }
+
 }
 
 persist_with: divvydose_default_datagroup

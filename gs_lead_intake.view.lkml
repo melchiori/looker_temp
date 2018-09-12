@@ -99,6 +99,8 @@ view: gs_lead_intake {
     sql: ${TABLE}.sales_outcome_detail ;;
   }
 
+# *** Custom Dimensions  ****
+
 dimension: lead_type {
   type: string
   sql:  CASE
@@ -123,6 +125,8 @@ dimension: lead_type {
     type: yesno
     sql: ( ${TABLE}.lead_sold_date not between DATE_TRUNC('year', CURRENT_TIMESTAMP) and CURRENT_TIMESTAMP ) ;;
   }
+
+# *** Custom Measures  ****
 
   measure: lead_count {
     type: count
