@@ -1,5 +1,6 @@
 view: gs_never_started {
   sql_table_name: public.gs_never_started ;;
+  label: "Lead Loss Reasons (Never-Started Tracker)"
 
   dimension: id {
     primary_key: yes

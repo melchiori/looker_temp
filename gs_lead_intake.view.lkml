@@ -1,4 +1,5 @@
 view: gs_lead_intake {
+  label: "Lead Intake Funnel"
   sql_table_name: public.gs_lead_intake ;;
 
   dimension: id {
